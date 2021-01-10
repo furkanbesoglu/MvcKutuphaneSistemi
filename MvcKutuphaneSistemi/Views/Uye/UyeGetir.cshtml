@@ -1,0 +1,50 @@
+﻿@model MvcKutuphaneSistemi.Models.Entity.Uyeler
+@{
+    ViewBag.Title = "UyeGetir";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+
+<br />
+@using (@Html.BeginForm("UyeGuncelle", "Uye", FormMethod.Post))
+{
+    <div style="margin-top:15px;">
+        <label>Üye İD</label>
+        @Html.TextBoxFor(u => u.UyeID, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px;">
+        <label>Üye Adı</label>
+        @Html.TextBoxFor(u => u.UyeAD, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px;">
+        <label>Üye Soyadı</label>
+        @Html.TextBoxFor(u => u.UyeSoyad, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px;">
+        <label>E-mail</label>
+        @Html.TextBoxFor(u => u.UyeMail, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px;">
+        <label>Kullanıcı Adı</label>
+        @Html.TextBoxFor(u => u.KullaniciAdi, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px;">
+        <label>Şifre</label>
+        @Html.TextBoxFor(u => u.Sifre, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px;">
+        <label>Fotoğraf</label>
+        @Html.TextBoxFor(u => u.Fotograf, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px;">
+        <label>Üye Telefon</label>
+        @Html.TextBoxFor(u => u.Telefon, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px;">
+        <label>Okul İsmi</label>
+        @Html.TextBoxFor(u => u.OkulAD, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px;">
+        <button class="btn btn-warning">Üye Bilgilerini Güncelle</button>
+    </div>
+}
+

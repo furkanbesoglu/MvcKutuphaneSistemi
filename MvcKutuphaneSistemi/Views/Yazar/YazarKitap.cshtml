@@ -1,0 +1,27 @@
+﻿@using MvcKutuphaneSistemi.Models.Entity;
+@model List<Kitaplar>
+@{
+    ViewBag.Title = "YazarKitap";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+
+<h2>Yazar'ın Adı ve Soyadı : @ViewBag.dgr1 </h2>
+<br />
+<table class="table table-active">
+    <tr>
+        <th>Kitap ID</th>
+        <th>Kitap Adı</th>
+        <th>Kategorisi</th>
+        <th>Yayın Evi</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <th>@x.KitapID</th>
+            <td>@x.KitapAD</td>
+            <td>@x.Kategoriler.KategoriAD</td>
+            <td>@x.YayinEvi</td>
+        </tr>
+    }
+</table>
+

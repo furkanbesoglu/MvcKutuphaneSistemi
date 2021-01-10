@@ -1,0 +1,21 @@
+﻿@model MvcKutuphaneSistemi.Models.Entity.Kategoriler
+@{
+    ViewBag.Title = "KategoriGetir";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+
+<br />
+@using (Html.BeginForm("KategoriGuncelle", "Kategoriler", FormMethod.Post))
+{
+    <div>
+        <label>Kategori İD:</label>
+        @Html.TextBoxFor(k => k.KategoriID, new { @class = "form-control" })
+        <br />
+        <label>Kategori Adı:</label>
+        @Html.TextBoxFor(k => k.KategoriAD, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px;">
+        <button class="btn btn-warning">Kategori Güncelle</button>
+    </div>
+}
+

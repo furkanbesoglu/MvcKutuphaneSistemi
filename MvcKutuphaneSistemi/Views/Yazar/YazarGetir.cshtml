@@ -1,0 +1,27 @@
+﻿@model MvcKutuphaneSistemi.Models.Entity.Yazarlar
+@{
+    ViewBag.Title = "YazarGetir";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+
+<br />
+@using (Html.BeginForm("YazarGuncelle", "Yazar", FormMethod.Post))
+{
+    <div>
+        <label>Yazar İD</label>
+        @Html.TextBoxFor(y => y.YazarID, new { @class = "form-control" })
+        <br />
+        <label>Yazar Adı</label>
+        @Html.TextBoxFor(y => y.YazarAD, new { @class = "form-control" })
+        <br />
+        <label>Yazar Soyadı</label>
+        @Html.TextBoxFor(y => y.YazarSoyad, new { @class = "form-control" })
+        <br />
+        <label>Detay</label>
+        @Html.TextAreaFor(y => y.Detay, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px;">
+        <button class="btn btn-warning">Yazar Bilgilerini Güncelle</button>
+    </div>
+}
+

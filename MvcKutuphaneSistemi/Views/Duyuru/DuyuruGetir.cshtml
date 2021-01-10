@@ -1,0 +1,27 @@
+﻿@model MvcKutuphaneSistemi.Models.Entity.Duyuru
+@{
+    ViewBag.Title = "DuyuruGetir";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+<br />
+@using (Html.BeginForm("DuyuruGuncelle", "Duyuru", FormMethod.Post))
+{
+    <div>
+        <label>Duyuru ID</label>
+        @Html.TextBoxFor(k => k.DuyuruID, new { @class = "form-control" })
+        <br />
+        <label>Duyuru Başlık</label>
+        @Html.TextBoxFor(k => k.DuyuruKategori, new { @class = "form-control" })
+        <br />
+        <label>Duyuru İçerik</label>
+        @Html.TextBoxFor(k => k.DuyuruIcerik, new { @class = "form-control" })
+        <br />
+        <label>Duyuru Tarih</label>
+        @Html.TextBoxFor(k => k.DuyuruTarih, "{0:dd.MM.yyyy}" ,new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px;">
+        <button class="btn btn-warning">Duyuru Güncelle</button>
+    </div>
+}
+
+

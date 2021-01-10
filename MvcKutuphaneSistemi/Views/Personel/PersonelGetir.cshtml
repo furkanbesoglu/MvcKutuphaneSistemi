@@ -1,0 +1,23 @@
+﻿@model MvcKutuphaneSistemi.Models.Entity.Personel
+@{
+    ViewBag.Title = "PersonelGetir";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+
+<br />
+@using (Html.BeginForm("PersonelGuncelle", "Personel", FormMethod.Post))
+{
+    <div>
+        <label>Personel İD</label>
+        @Html.TextBoxFor(p => p.PersonelID, new { @class = "form-control" })
+        <br />
+        <label>Personel Adı Soyadı</label>
+        @Html.TextBoxFor(p => p.PersonelAdSoyad, new { @class = "form-control" })
+
+
+    </div>
+    <div style="margin-top:15px;">
+        <button class="btn btn-warning">Personel Bilgilerini Güncelle</button>
+    </div>
+}
+
